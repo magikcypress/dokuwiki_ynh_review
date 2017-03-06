@@ -75,7 +75,7 @@ SETUP_SOURCE () {	# Télécharge la source, décompresse et copie dans $final_pa
 	# Vérifie la somme de contrôle de la source téléchargée.
 	md5sum -c ../sources/source_md5 --status
 	# Décompresse la source
-	if [ "$(echo ${1##*.})" == "gz" ]; then
+	if [ "$(echo ${1##*.})" == "tgz" ]; then
 		tar -x -f $1
 	elif [ "$(echo ${1##*.})" == "zip" ]; then
 		unzip -q $1
